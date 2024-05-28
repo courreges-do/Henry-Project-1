@@ -1,0 +1,33 @@
+body{
+    background-color: blanchedalmond;
+    color: black;
+}
+header{
+    border: red;
+    padding: 1rem 0.5rem;
+    background-color: aliceblue;
+    color: black;
+    box-shadow: 4px 4px 10px 10px aliceblue;
+}
+h1{
+    border: 1px solid red;
+    width: 100%;
+    text-align: center;
+}
+nav{
+    border: 1px solid red;
+    ul{
+        border: 1px solid blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+a {
+    color: rgb(37, 26, 48);
+    text-decoration: none;
+}
+a:hover  {
+        color: blue;
+        text-decoration: double;
+    }
