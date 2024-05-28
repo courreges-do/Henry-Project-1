@@ -3,9 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <title>Mi portfolio</title>
 </head>
 <body>
-    <h1>Proyecto M1</h1>
+    <header>
+    <h1>Mi primera página web</h1>
+    <nav>
+    <ul>
+        <li>
+            <a href="#"> Acerca de mí</a>
+        </li>
+        <li>
+            <a href="#">Mis tecnologías favoritas</a>
+            </li>
+        <li>
+            <a href="#">Mis actividades favoritas</a>
+        </li>
+    </ul>
+</nav>
+</header>
+<section id="about_me">
+    <h2>Acerca de mí</h2>
+    <img src="./assets" alt="imagen">
+    <p>Estoy estudiando programación</p>
+</section>
+<section id="favorite_techs">
+    <h2>Mis tecnologías favoritas</h2>
+    <p>Me gusta mucho Javascript</p>
+    <ul>
+        <li>
+            <h3>HTML</h3>
+            <img src="" alt="">
+        </li>
+        <li>
+            <h3>CSS</h3>
+            <img src="" alt="">
+        </li>
+        <li>
+            <h3>Javascript</h3>
+            <img src="" alt="">
+        </li>
+    </ul>
+</section>
+<section id="favorite_activ">
+    <h2>Mis actividades favoritas</h2>
+    <form>
+        <label>Título:
+            <input type="text" placeholder="Actividad"/>
+        </label>
+        <label> Descripción:
+            <input type="text"/>
+        </label>
+        <label>URL 
+            <input type="url"/>
+        </label>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
 </body>
 </html>
