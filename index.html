@@ -9,43 +9,30 @@
 </head>
 <body>
     <header>
-    <h1>Mi primera página web</h1>
-    <nav>
-    <ul>
-        <li>
-            <a href="#"> Acerca de mí</a>
-        </li>
-        <li>
-            <a href="#">Mis tecnologías favoritas</a>
-            </li>
-        <li>
-            <a href="#">Mis actividades favoritas</a>
-        </li>
-    </ul>
-</nav>
+    <h1 class="title">Dominique Courrèges</h1>
+    <br>
+    <h2>Mi página web</h2>
 </header>
 <section id="about_me">
-    <h2>Acerca de mí</h2>
-    <img src="./assets" alt="imagen">
-    <p>Estoy estudiando programación</p>
+    <h2>Sobre mí</h2>
+    <p>Mi nombre es Dominique y estoy estudiando Javascript después de 6 años en el rubro de las heladerías artesanales.</p>
 </section>
 <section id="favorite_techs">
     <h2>Mis tecnologías favoritas</h2>
-    <p>Me gusta mucho Javascript</p>
-    <ul>
-        <li>
+   <div class="imagenes-container">
+       <div>
             <h3>HTML</h3>
-            <img src="" alt="">
-        </li>
-        <li>
+            <img src="./html logo.svg" class="logo">
+        </div>
+        <div>
             <h3>CSS</h3>
-            <img src="" alt="">
-        </li>
-        <li>
+            <img src="./logos--css-3.svg" class="logo">
+        </div>
+        <div>
             <h3>Javascript</h3>
-            <img src="" alt="">
-        </li>
-    </ul>
+            <img src="./skill-icons--javascript.svg" class="logo">
+        </div>
+        </div>
 </section>
 <section id="favorite_activ">
     <h2>Mis actividades favoritas</h2>
@@ -61,6 +48,9 @@
         </label>
         <button type="submit">Enviar</button>
     </form>
+    <h2>Estas son las actividades</h2>
+    <div id="container_activ">
+    </div>
 </section>
 </body>
 </html>
