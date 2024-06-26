@@ -1,60 +1,22 @@
-body{
-    background-color: rgb(247, 247, 237);
+#title {
+    display: flex;
+    font-weight: bold;
+    font-size: 30px;
+    justify-content: space-around;
+ }
+ h2{
+    display: flex;
+    justify-content: space-around;
+ }
+ body{
+    background-color: rgb(247,247,237);
     color: black;
-    margin: 20px
-}
-.title{
-    font-size: 3em;
-    color: rgb(9, 48, 9);
-}
-header{
-    text-align: center;
-    padding: 3em 3em;
-    background-color: rgb(247, 247, 237);
-    color: black;
-    box-shadow: 4px 4px 10px 10px rgb(247, 247, 237);
-}
-h1{
-    border: 1px solid red;
-    width: 100%;
-    text-align: center;
-}
-#favorite_activ h2{
+ }
+ #favorite_activ h2, #favorite_techs h2, #about_me h2{
     font-weight: bold;
-}
-#favorite_techs h2{
-    font-weight: bold;
-}
-#about_me h2{
-    font-weight: bold;
-}
-a {
-    color: rgb(37, 26, 48);
-    text-decoration: none;
-}
-a:hover  {
-        color: blue;
-        text-decoration: double;
-    }
-.logo {
-    border: 2px solid black;
-    border-radius: 10%;
-    transition: 1s;
-    display: flex;  
-    flex-direction: column;
-    gap: 1em;
-    align-items: center;
-    height: fit-content;
-  }   
-  .logo:hover{
-    background-color: rgb(220, 175, 62);
-  } 
- .imagenes-container{
-    display:grid;
-    grid-auto-flow: column;
-    gap: 10px;
-}
-img{
-    width:100px;
-    height: 100px;
-}
+ }
+.imagenes-container{
+    display: flex;
+    justify-content: space-evenly;
+ }
+ 
