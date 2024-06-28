@@ -1,21 +1,23 @@
 #title {
-    display: flex;
     font-weight: bold;
     font-size: 30px;
+    display: flex;
     justify-content: space-around;
+    margin: 1em auto 1em;
  }
  h2{
     display: flex;
     justify-content: space-around;
- }
+}  
  body{
+    font-family: Verdana;
     background-color: rgb(247,247,237);
     color: black;
  }
  #favorite_activ h2, #favorite_techs h2, #about_me h2{
     font-weight: bold;
  }
-.imagenes-container{
+.imagenesContainer{
     display: flex;
     justify-content: space-evenly;
  }
