@@ -1,32 +1,32 @@
-class Activity {
-    constructor (id, title, description, imgUrl){
+ class Activity {
+    constructor (id, title, description, imgUrl) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.imgUrl = imgUrl;
     }
-}
+ }
 
-class Repository{
+ class Repository{
     constructor() {
         this.activities = [];
         this.id = 0;
     }
 
-    getAllActivities(){
+    getAllActivities() {
         return this.activities;
     }
 
-    createActivity(title, description, imgUrl){
+    createActivity(title, description, imgUrl) {
         const id = this.id
         const activity = new Activity(id, title, description, imgUrl)
         this.activities.push(activity)
     }
-}
+ }
 
-const repo =  new Repository();
+ const repo =  new Repository();
 
-function buildActivity (activity){
+ function buildActivity (activity){
     const {id, title, description, imgUrl} = activity
 
     const h3 = document.createElement("h3");
@@ -45,7 +45,7 @@ function buildActivity (activity){
     card.appendChild(img)
 
     return card;
-}
+ }
  function buildAllActivities() {
     const imagenesContainer = document.getElementById("imagenesContainer");
     imagenesContainer.innerHTML = "";
@@ -84,3 +84,4 @@ function buildActivity (activity){
     event.preventDefault();
     handleClickSubmit();
  });
+
