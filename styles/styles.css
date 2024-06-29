@@ -13,7 +13,7 @@
     text-align: center;
     padding: 3em 3em;
 }
-#about_me h2, #favorite_techs h2, #favorite_activ h2{
+.subtitle{
     font-weight: bold;
     padding: 1em 1em;
  }
@@ -21,7 +21,7 @@
     width:100px;
     height: 100px;
 }
-.imagenesContainer{
+#imagenesContainer{
     display: flex;
     justify-content: space-evenly;
  }

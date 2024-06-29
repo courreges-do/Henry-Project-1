@@ -1,58 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <link rel="stylesheet" type="text/css" href="./styles/reset.css">
     <title>Mi portfolio</title>
-</head>
-<body>
+ </head>
+ <body>
     <header>
     <h1 id="title">Dominique Courrèges</h1>
     <h2>Mi página web</h2>
  </header>
  <main>
+
  <section id="about_me">
     <h2 class="subtitle">Sobre mí</h2>
-    <p>Mi nombre es Dominique y estoy estudiando Javascript después de 6 años en el rubro de las heladerías artesanales.</p>
+    <p class="introduction1">Mi nombre es Dominique y estoy estudiando Javascript después de 6 años en el rubro de las heladerías artesanales.</p>
  </section>
+
  <section id="favorite_techs">
     <h2 class="subtitle">Mis tecnologías favoritas</h2>
-   <div class="imagenesContainer">
-       <div>
-            <h3>HTML</h3>
-            <img src="./assets/html logo.svg" class="logo" alt="html-logo" title="logo-html">
+    <div id="imagenesContainer">
+       <div class="imagenes">
+            <h3 class="imageName">HTML</h3>
+            <img src="./assets/html logo.svg" alt="html-logo" title="logo-html">
         </div>
-        <div>
-            <h3>CSS</h3>
-            <img src="./assets/css logo.svg" class="logo" alt="css-logo" title="logo-css">
+        <div class="imagenes">
+            <h3 class="imageName">CSS</h3>
+            <img src="./assets/css logo.svg" alt="css-logo" title="logo-css">
         </div>
-        <div>
-            <h3>Javascript</h3>
-            <img src="./assets/javascript logo.svg" class="logo" alt="javascriptlogo" title="logo-javascript">
+        <div class="imagenes">
+            <h3 class="imageName">Javascript</h3>
+            <img src="./assets/javascript logo.svg" alt="javascriptlogo" title="logo-javascript">
         </div>
-        </div>
+    </div>
  </section>
+
  <section id="favorite_activ">
     <h2 class="subtitle">Mis actividades favoritas</h2>
-    <form>
-        <label>Título:
-            <input type="text" placeholder="Actividad"/>
-        </label>
-        <label> Descripción:
-            <input type="text"/>
-        </label>
-        <label>URL 
-            <input type="url"/>
-        </label>
-        <button type="submit">Enviar</button>
+    <form id="formulario">
+        <input type="text" name="nombre" id="nombre" class="input_text" placeholder="Actividad"/>
+        <textarea name="descripcion" id="descripcion" placeholder="Descripción de la Actividad"></textarea>
+        <input type="text" name="imagen" id="imagen" class="input_text" placeholder="URL de la imagen"/>
+        <button type="submit" id="boton">Enviar</button>
     </form>
-    <h2>Estas son las actividades</h2>
-    <div id="container_activ">
-    </div>
-</section>
-</main>
-<script src="scripts/index.js"></script>
-</body>
-</html>
+    <div id="ActivityContainer">Sin actividades por el momento.</div>
+ </section>
+
+ </main>
+ <script src="scripts/index.js"></script>
+ </body>
+ </html>
