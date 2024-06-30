@@ -25,9 +25,6 @@
  }
 
  const repo =  new Repository();
-/*
- repo.createActivity("leer","me gusta descubrir mundos nuevos","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.abc.es%2Fcultura%2Flibros%2F20130423%2Fabci-beneficios-lectura-libro-201304221632.html&psig=AOvVaw2ORSmOpM88-IVex6xNgDLj&ust=1719845141854000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLiYnd3Ig4cDFQAAAAAdAAAAABAE")
- */
 
     function buildActivity (activity) {
     const {id, title, description, imgUrl} = activity;
