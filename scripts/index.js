@@ -18,16 +18,19 @@
     }
 
     createActivity(title, description, imgUrl) {
-        const id = this.id
-        const activity = new Activity(id, title, description, imgUrl)
+        ++this.id;
+        const activity = new Activity(this.id, title, description, imgUrl)
         this.activities.push(activity)
     }
  }
 
  const repo =  new Repository();
+/*
+ repo.createActivity("leer","me gusta descubrir mundos nuevos","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.abc.es%2Fcultura%2Flibros%2F20130423%2Fabci-beneficios-lectura-libro-201304221632.html&psig=AOvVaw2ORSmOpM88-IVex6xNgDLj&ust=1719845141854000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLiYnd3Ig4cDFQAAAAAdAAAAABAE")
+ */
 
- function buildActivity (activity){
-    const {id, title, description, imgUrl} = activity
+    function buildActivity (activity) {
+    const {id, title, description, imgUrl} = activity;
 
     const h3 = document.createElement("h3");
     h3.textContent = title;
@@ -40,9 +43,9 @@
     card.className = "card";
     card.id = id;
 
-    card.appendChild(h3)
-    card.appendChild(p)
-    card.appendChild(img)
+    card.appendChild(h3);
+    card.appendChild(p);
+    card.appendChild(img);
 
     return card;
  }
@@ -50,10 +53,10 @@
     const imagenesContainer = document.getElementById("imagenesContainer");
     imagenesContainer.innerHTML = "";
 
-    const getAllActivities = repository.getAllActivities();
+    const getAllActivities = repo.getAllActivities();
 
-    const HTMLactivities = getAllActivities.map((activity) => {
-        buildActivity(activity);
+    const HTMLActivities = getAllActivities.map((activity) => {
+        return buildActivity(activity);
     });
 
     HTMLActivities.forEach((activityHTML) =>{
@@ -67,15 +70,15 @@
     const description = document.getElementById("description");
     const imgUrl = document.getElementById("imgUrl");
 
-    const titleValue = title.value
-    const descriptionValue = description.value
-    const imgUrlValue = imgUrl.value
+    const titleValue = title.value;
+    const descriptionValue = description.value;
+    const imgUrlValue = imgUrl.value;
 
-    if(!titleValue.trim() || !descriptionValue.trim() || !imgUrlValue.trim()){
-        alert("Campos obligatorios")
+    if(!titleValue.trim() || !descriptionValue.trim() || !imgUrlValue.trim()) {
+        alert("Campos obligatorios");
         return;
     }
-    repository.createActivity(titleValue,descriptionValue, imgUrlValue);
+    repo.createActivity(titleValue,descriptionValue, imgUrlValue);
     buildAllActivities();
  }
 
