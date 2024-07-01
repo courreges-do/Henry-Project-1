@@ -30,57 +30,59 @@
     const {id, title, description, imgUrl} = activity;
 
     const h3 = document.createElement("h3");
-    h3.textContent = title;
+    h3.innerHTML = title;
     const p = document.createElement("p");
-    p.textContent = description;
+    p.innerHTML = description;
     const img = document.createElement("img");
     img.src = imgUrl;
+    img.alt = "Image not found";
 
     const card = document.createElement("div");
-    card.className = "card";
+    card.className = "activitiesCards";
     card.id = id;
 
+    card.appendChild(img);
     card.appendChild(h3);
     card.appendChild(p);
-    card.appendChild(img);
 
     return card;
  }
  function buildAllActivities() {
-    const imagenesContainer = document.getElementById("imagenesContainer");
-    imagenesContainer.innerHTML = "";
+    const activityContainer = document.getElementById("activityContainer");
+    activityContainer.innerHTML = "";
 
-    const getAllActivities = repo.getAllActivities();
+    const allActivities = repo.getAllActivities();
 
-    const HTMLActivities = getAllActivities.map((activity) => {
-        return buildActivity(activity);
-    });
+    const HTMLActivities = allActivities.map((activity) =>
+        buildActivity(activity)
+    );
 
-    HTMLActivities.forEach((activityHTML) =>{
-        imagenesContainer.appendChild(activityHTML);
+    HTMLActivities.forEach((activityHTML) => {
+        activityContainer.appendChild(activityHTML);
     });
 
  }
 
  function handleClickSubmit(){
-    const title = document.getElementById("title");
-    const description = document.getElementById("description");
-    const imgUrl = document.getElementById("imgUrl");
+    const nombre = document.getElementById("nombre");
+    const descripcion = document.getElementById("descripcion");
+    const imagen = document.getElementById("imagen");
 
-    const titleValue = title.value;
-    const descriptionValue = description.value;
-    const imgUrlValue = imgUrl.value;
+    const nombreValue = nombre.value;
+    const descripcionValue = descripcion.value;
+    const imagenValue = imagen.value;
 
-    if(!titleValue.trim() || !descriptionValue.trim() || !imgUrlValue.trim()) {
+    if(!nombreValue.trim() || !descripcionValue.trim() || !imagenValue.trim()) {
         alert("Campos obligatorios");
         return;
     }
-    repo.createActivity(titleValue,descriptionValue, imgUrlValue);
+
+    repo.createActivity(nombreValue,descripcionValue,imagenValue);
     buildAllActivities();
  }
 
- const buttonSubmit = document.getElementById("submitButton");
- buttonSubmit.addEventListener("click", function(event) {
+ const boton = document.getElementById("boton");
+ boton.addEventListener("click", function(event) {
     event.preventDefault();
     handleClickSubmit();
  });
